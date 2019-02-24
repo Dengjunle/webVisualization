@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script src="jquery-2.0.3.js"></script>
+	<script>
+		$(function(){
+			$('.button').on('click',function(){
+				var width = $('.width').val()!=""?$('.width').val():$('.width').width();
+				$('.image').animate({width:width+'px'});
+			})
+		})
+	</script>
+	<body>
+		<div>
+			变宽：<input type="text"  class="width"/>
+			<input type="button" value="执行" class="button" />
+		</div>
+		<div>
+			<img src="ceshitupian/1.jpg" class="image"/>
+		</div>
+	</body>
+</html>
