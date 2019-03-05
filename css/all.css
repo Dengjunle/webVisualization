@@ -1,0 +1,286 @@
+/* CSS Document */
+.navbar-default{
+	background-color: #e94c3c;
+}
+.navbar-default .navbar-brand ,.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand:visited{
+    color: #ffffff;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #e94c3c;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #ffffff;
+    background-color: #e94c3c;
+}
+.navbar-nav-list{
+	width: 160px;
+}
+.navbar-nav-list>a{
+	text-align: center;
+}
+.navbar-nav-list>ul>li{
+	width: 100%;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    color: #ffffff;
+    background-color: #e94c3c;
+}
+.dropdown-menu{
+	background-color:#e94c3c; 
+	border: 1px solid #e94c3c;
+}
+.dropdown-menu > li > a{
+	color: #FFFFFF;
+	background-color: #e94c3c;
+}
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fffdfd;
+    text-decoration: none;
+    background-color: #ff2626;
+}
+.left{
+	height: 1000px;
+	background-color: #eeeeee;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background-color: #e0dfdf;
+}
+.list-group-item{
+	background-color: #eeeeee;
+}
+.content>.list-group>.list-group-title{
+	
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+     padding-right: 0px; 
+     padding-left: 0px; 
+}
+/*center布局*/
+.center{
+/*	width: 100%;*/
+/*	min-height: 500px;*/
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.center .title{
+	font-size:16px;
+	line-height: 40px;
+}
+.center .info {
+	font-size: 14px;
+	color:#999;
+	margin-bottom: 20px;
+}
+.center .item{
+	width:50%;
+	/*height:30px;*/
+	float: left;
+	margin-bottom: 15px;
+}
+.center .params .tips{
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	font-size:14px;
+	color: #ccc;
+	border:dashed 1px #ddd;
+	text-align: center;
+}
+.center .params .speed{
+	width: 50%;
+    height: 30px;
+	float: left;
+	display: none;
+    margin-bottom: 15px;
+}
+.center .params .speed input{
+	border: solid 1px #ccc;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #999;
+	background: #eee;
+	width:130px;
+	margin-left: 11px;
+}
+.center .item span{
+	font-size:14px;
+	/*width:90px;*/
+	display: inline-block;
+}
+.center .item input[type="input"]{
+	border: solid 1px #ccc;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #999;
+	background: #eee;
+	width:130px;
+}
+.center .item input[type="button"]{
+	width:100px;
+	height: 28px;
+	background: #2678ec;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	margin: 20px auto 0;
+}
+.log{
+	width:100%;
+	height: 260px;
+	float: left;
+	margin-top:50px;
+	border:solid 1px #ccc;
+	background: #efefef;
+	padding: 10px;
+}
+.log .tit{
+	line-height:30px;
+}
+.log .detail{
+	width:100%;
+	height:220px;
+	overflow-y: auto;
+	line-height: 24px;
+	color:#999;
+}
+.log .detail .step span{
+	font-size:16px;
+	color:#369;
+	padding: 0 5px;
+}
+/*动画演示*/
+.wrapper{
+	float: left;
+}
+.wrapper .title{
+	font-size:16px;
+	line-height: 40px;
+}
+
+.wrapper .result{
+	float: left;
+	position: relative;
+	padding: 50px 70px;
+	border: dashed 2px #e94c3c;
+}
+.wrapper .result .target{
+	position: relative;
+}
+.left-box>.dropdown{
+	float:left;
+}
+.left-box>.dropdown-menu {
+	/*margin-left:0px;*/
+	top: 30px;
+	/*left:0;*/
+}
+.left-box{
+	position: relative;
+	/*background-color: #ccc;*/
+}
+.left-box>a{
+	width: 100%;
+	/*float: right;*/
+	text-align: right;
+	/*background-color: #ccc;*/
+	
+	
+}
+.left-box>div{
+	/*background-color: #d9534f;*/
+	color: white;
+}
+.left-box>.dropdown-menu{
+	background-color: #d9534f;
+	position: absolute;
+	float: left;
+}
+.left-box>div>button{
+	background-color: red;
+}
+.left-box>.dropdown-menu>div>.list-group-item:first-child {
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+background-color: #d9534f;
+border: 1px solid #d43f3a;
+}
+
+.left-box>.dropdown-menu>div>.list-group-item{
+	background-color: #d9534f;
+	border: 1px solid #d43f3a;
+	color: white
+}
+.left-box>.dropdown-menu>div>.list-group-item:hover{
+	background-color: #d43f3a;
+	color: white
+}
+.left-box>.list-group>a{
+	width: 100%;
+}
+.left-box>.dropdown-menu>div>.params{
+	/*display: flex;
+	justify-content: space-around;*/
+}
+.left-box>.dropdown-menu>div>.params>.item{
+	width:50%;
+	/*height:30px;*/
+	float: left;
+	text-align: right;
+	margin-bottom: 15px;
+	padding-right: 10px;
+}
+.left-box>.dropdown-menu>div>.params>.item span{
+	font-size:14px;
+	/*width:90px;*/
+	display: inline-block;
+}
+.left-box>.dropdown-menu>div>.params>.item input[type="input"]{
+	border: solid 1px #ccc;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	color: #999;
+	background: #eee;
+	width:100px;
+}
+.left-box>.dropdown-menu>div>input{
+	width: 100%;
+	background-color: #d43f3a;
+	border: 1px solid red;
+	clear: both;
+	padding: 5px;
+}
+.left-box>.dropdown-menu{
+	/*opacity: 0.5;*/
+	/*background: rgba(0,0,0,0.4);*/
+}
+@media (min-width: 768px){
+	.navbar {
+   	 border-radius: 0px;
+	}
+}
+@media (max-width: 767px){
+	.navbar-nav-list{
+		width: 100%;
+	}
+	.navbar-nav .open .dropdown-menu {
+		background-color: #ff2626;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a ,.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+    	color: #ffffff;
+	}
+}
+

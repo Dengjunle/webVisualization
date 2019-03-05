@@ -4,10 +4,10 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Untitled Document</title>
+    <title>jq动画</title>
     <!-- Bootstrap -->
 	<link href="../css/bootstrap.css" rel="stylesheet">
-	<link href="../css/index.css" type="text/css" rel="stylesheet">
+	<link href="../css/all.css" type="text/css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -16,6 +16,9 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
   </head>
+  <style>
+  	
+  </style>
   <body>
 	  <div class="header">
 		  <nav class="navbar navbar-default">
@@ -71,7 +74,7 @@
 	  </div>
 <!--	  <div class="content">-->
 		<!--left左边列表-->
-		<div class="left col-lg-2 col-xs-2 col-md-2 col-ms-2">
+		<div class="left col-lg-2 col-md-2 col-sm-2 hidden-xs">
 		  <div class="list-group">
 			  <div class="list-group-title list-group-item">jQuery动画</div>
 			  <button data-name="width" type="button" class="list-group-item">宽度</button>
@@ -79,13 +82,53 @@
 			  <button data-name="opacity" type="button" class="list-group-item">透明度</button>
 			  <button data-name="top" type="button" class="list-group-item">上定位</button>
 			  <button data-name="bottom" type="button" class="list-group-item">下定位</button>
+			  <button data-name="left" type="button" class="list-group-item">左定位</button>
+				<button data-name="right" type="button" class="list-group-item">右定位</button>
+				<button data-name="marginTop" type="button" class="list-group-item">上外边距</button>
+				<button data-name="marginBottom" type="button" class="list-group-item">下外边距</button>
+				<button data-name="marginLeft" type="button" class="list-group-item">左外边距</button>
+				<button data-name="marginRight" type="button" class="list-group-item">右外边距</button>
 		  </div>
 		</div>
+		
+		
+		<div class="left-box dropdown hidden-lg hidden-md hidden-sm col-xs-12">
+			<a href="" class="btn btn-danger" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-right"></span><span>jQuery动画</span></a>
+			<div class="dropdown-menu col-xs-12">
+				<div class="list-group col-xs-3">
+					<div class="list-group-title list-group-item">jQuery动画</div>
+				  <button data-name="width" type="button" class="list-group-item">宽度</button>
+				  <button data-name="height" type="button" class="list-group-item">高度</button>
+				  <button data-name="opacity" type="button" class="list-group-item">透明度</button>
+				  <button data-name="top" type="button" class="list-group-item">上定位</button>
+				  <button data-name="bottom" type="button" class="list-group-item">下定位</button>
+				  <button data-name="left" type="button" class="list-group-item">左定位</button>
+					<button data-name="right" type="button" class="list-group-item">右定位</button>
+					<button data-name="marginTop" type="button" class="list-group-item">上外边距</button>
+					<button data-name="marginBottom" type="button" class="list-group-item">下外边距</button>
+					<button data-name="marginLeft" type="button" class="list-group-item">左外边距</button>
+					<button data-name="marginRight" type="button" class="list-group-item">右外边距</button>
+				</div>
+			  <div class="col-xs-9">
+			  	<div class="params">
+						<div class="tips">点击左侧添加动画</div>
+						<div class="speed">
+							动画时间：<input type="type" placeholder="默认500毫秒" id="j-speed">
+						</div>
+					</div>
+					<input type="button" value="还原" class="reset">
+			  </div>
+			  <a href="" class="col-xs-12 btn btn-danger" data-toggle="dropdown"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		 </div>
+		</div>
+		
+		
+		
 	  	<!--center中间布局-->
-		<div class="center col-lg-5 col-xs-5 col-md-5 col-ms-5">
+		<div class="center col-lg-5 col-xs-12 col-md-5 col-ms-5">
 			<div class="title">参数设置：</div>
-			<div class="info">说明：点击左侧菜单添加配置，根据动画配置的参数，点击执行按钮查看动画效果。<br>注：距离操作单位为px</div>
-			<div class="params">
+			<div class="info">说明：点击jQuery动画菜单添加配置，根据动画配置的参数，点击执行按钮查看动画效果。<br>注：距离操作单位为px</div>
+			<div class="params hidden-xs">
 				<div class="tips">点击左侧添加动画</div>
 				<div class="speed">
 					动画时间：<input type="type" placeholder="默认500毫秒" id="j-speed">
@@ -94,9 +137,9 @@
 			<div class="item" style="width:100%;text-align:center;">
 				<input type="button" value="执行动画" class="button" data-type="order">&nbsp;
 				<input type="button" value="动画队列" class="button" data-type="queue">&nbsp;
-				<input type="button" value="还原" class="reset">
+				<input type="button" value="还原" class="reset hidden-xs">
 			</div>
-			<div class="log">
+			<div class="log hidden-xs">
 				<div class="tit">操作日志：</div>
 				<div class="detail">
 
@@ -105,7 +148,7 @@
 		</div>
 	  		
 		<!--右边展示布局-->
-		<div class="right col-lg-5 col-xs-5 col-md-5 col-ms-5">
+		<div class="right col-lg-5 col-xs-12 col-md-5 col-ms-5">
 			<!--演示结果-->
 			<div class="wrapper">
 				<div class="title">演示结果：</div>
@@ -114,130 +157,17 @@
 				</div>
 			</div>
 		</div>
+		
+		<div class="log hidden-lg hidden-md hidden-sm col-xs-12">
+				<div class="tit">操作日志：</div>
+				<div class="detail">
+
+				</div>
+			</div>
 <!--	  </div>-->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="../js/jquery-1.11.3.min.js"></script>
-	<script>
-		//结果集
-		var result = [];
-		//初始速度
-		var _speed = 500;
-		$(function(){
-			//左边按钮点击出现在中间位置
-			$('.list-group>button').on('click',function(){
-				//清空结果集
-				result = [];
-				//获取data-name的值
-				var name = $(this).data('name');
-//				alert(name);
-				var title = $(this).text();
-//				alert(title);
-				//隐藏提示框
-				$('.params>.tips').hide();
-				//显示速度框
-				$('.params>.speed').show();
-				//判断是否已经添加属性
-				var flag = true;
-				$('.params>.item').each(function(index,element){
-					var names = $(element).find('input').data('class');
-						if(names==name){
-							alert('此属性已添加');
-							flag=false;
-							return;
-						}
-				})
-				// 添加配置
-				if(flag){
-					$('.params').append('<div class="item">'+
-						'<span>'+title+'：</span><input type="input" value="" data-class='+name+' data-title='+title+' >'+
-						'</div>');
-				}
-				})
-				
-			
-			//执行动画
-			$('.button').on('click',function(){
-				$('.log>.detail').html('');
-				$('.params>.item').each(function(index,element){
-//					console.log($(element).val());
-							var values = $(element).find('input').val();
-							var name = $(element).find('input').data('class');
-							var title = $(element).find('input').data('title');
-							result.push({
-								values:values,
-								name:name,
-								title:title
-							});
-//							alert(typeof($('#j-speed').val()));
-							_speed = $('#j-speed').val()||500;
-//							alert(_speed);
-//							console.log(result);
-				})
-				if(result.length==0){
-					alert('执行失败，请添加动画效果后执行！');
-					return;
-				}
-				for(var key in result){
-					if(!result[key].values){
-						alert('执行失败，请填写完整的参数！');
-						result = [];
-						return;
-					}
-				}
-				
-				
-				if($(this).data('type')=="order"){
-					$('.log>.detail').append("执行顺序动画");
-//					alert('order');
-					orderDo();
-				}else{
-					$('.log>.detail').append("执行队列动画");
-//					alert('queue');
-					queueDo();
-				}
-				//清空结果集
-				result = [];
-			})
-			
-			//顺序执行动画
-			function orderDo(){
-				var param = {};
-				for(var key in result){
-					if(result[key].name=='opacity'){
-						param[result[key].name] = result[key].values;
-					}else{
-						param[result[key].name] = result[key].values+'px';
-					}
-					$('.log>.detail').append('<div class="step">执行：设置'+result[key].name+':'+param[result[key].name]+'</div>');
-				}
-//				console.log(param);
-				$('.target').animate(param,_speed);
-				$('.log>.detail').append('<div class="step">代码animate('+JSON.stringify(param)+','+_speed+')</div>');
-			}
-			//队列执行动画
-			function queueDo(){
-				var param = {};
-				for(var key in result){
-					if(result[key].name=='opacity'){
-						param[result[key].name] = result[key].values;
-					}else{
-						param[result[key].name] = result[key].values+'px';
-					}
-					$('.log>.detail').append('<div class="step">执行：设置'+result[key].name+':'+param[result[key].name]+'代码:animate({'+result[key].name+':'+param[result[key].name]+'},'+_speed+')</div>');
-//					$('.log>.detail').append('<div class="step">代码:animate('+JSON.stringify(param)+','+_speed+')</div>');
-					$('.target').animate(param,_speed);
-				}
-			}
-			
-			$('.reset').click(function(){
-				$('.params>.item').remove();
-				$('.params>.speed').hide();
-				$('.params>.tips').show();
-				$('.log>.detail').html('');
-			})
-			
-		})
-	</script>
+	<script type="text/javascript" src="../js/anmates.js" ></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="../js/bootstrap.js"></script>
   </body>
