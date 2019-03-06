@@ -8,6 +8,97 @@
     <!-- Bootstrap -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	</head>
+	<style>
+		/* CSS Document */
+		.navbar-default{
+			background-color: #e94c3c;
+		}
+		.navbar-default .navbar-brand ,.navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand:visited{
+		    color: #ffffff;
+		}
+		.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+		    background-color: #e94c3c;
+		}
+		.navbar-default .navbar-toggle .icon-bar {
+		    background-color: #ffffff;
+		}
+		.navbar-default .navbar-nav > li > a {
+		    color: #ffffff;
+		}
+		.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+		    color: #ffffff;
+		    background-color: #e94c3c;
+		}
+		.navbar-nav-list{
+			width: 160px;
+		}
+		.navbar-nav-list>a{
+			text-align: center;
+		}
+		.navbar-nav-list>ul>li{
+			width: 100%;
+		}
+		.navbar{
+			margin-bottom: 0px;
+		}
+		.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		    color: #ffffff;
+		    background-color: #e94c3c;
+		}
+		.dropdown-menu{
+			background-color:#e94c3c; 
+			border: 1px solid #e94c3c;
+		}
+		.dropdown-menu > li > a{
+			color: #FFFFFF;
+			background-color: #e94c3c;
+		}
+		.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+		    color: #fffdfd;
+		    text-decoration: none;
+		    background-color: #ff2626;
+		}
+		.list-group-item:first-child {
+		    border-top-left-radius: 0px;
+		    border-top-right-radius: 0px;
+		}
+		.conter{
+			width: 100%;
+		}
+		.conter>.tab-content>.tab-pane>div{
+			height: 100px;
+			border: 1px solid red;
+		}
+		.conter>.tab-content>.tab-pane>div>div{
+			width: 100%;
+			height: 50%;
+			border: 1px solid yellow;
+			overflow:auto;
+			
+		}
+		.conter-title{
+			width: 90%;
+			height: 15%;
+			margin-left: 5%;
+			margin-right: 5%;
+			border: 1px solid green;
+			font-size: 22px;
+			text-align: center;
+			padding-top: 15px;
+			/*background-color: green;*/
+		}
+		.conter-video{
+			width: 90%;
+			height: 85%;
+			margin-left: 5%;
+			margin-right: 5%;
+			border: 1px solid blue;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			/*background-color: blue;*/
+		}
+	</style>
 	<body>
 		<div class="header">
 		  <nav class="navbar navbar-default">
@@ -60,20 +151,66 @@
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-	  </div>
-		<div>
-			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a href="#">学习</a></li>
-			  <li role="presentation"><a href="#">练习</a></li>
-			</ul>
-		</div>
+	 </div>
 		
+		<div class="conter ">
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs" role="tablist">
+		    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">学习</a></li>
+		    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">练习</a></li>
+		  </ul>
+		
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		  	<!--学习-->
+		    <div role="tabpanel" class="tab-pane active" id="home">
+		    	<div class="col-lg-6 col-md-6 col-ms-6 col-xs-6">
+		    		<div>
+		    			<div class="conter-title">认识JavaScript</div>
+		    			<div class="conter-video">
+		    				<video src="video/one1.mp4" controls="controls" autoplay="autoplay" height="100%"></video>
+		    			</div>
+		    		</div>
+		    		<div><h1>Something else Something else</h1></div>
+		    	</div>
+		    	<div class="col-lg-6 col-md-6 col-ms-6 col-xs-6">
+		    		<div></div>
+		    		<div></div>
+		    	</div>
+		    </div>
+		    <!--练习-->
+		    <div role="tabpanel" class="tab-pane" id="profile">
+		    	<div class="col-lg-6 col-md-6 col-ms-6 col-xs-6">
+		    		<div>
+		    			<h2>题目</h2>
+		    			<p>内容</p>
+		    		</div>
+		    		<div>
+		    			
+		    		</div>
+		    	</div>
+		    	<div class="col-lg-6 col-md-6 col-ms-6 col-xs-6">
+		    		<div></div>
+		    		<div></div>
+		    	</div>
+		    </div>
+		  </div>
+		</div>
+			
 		
 		
 	</body>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 	<script src="js/jquery-2.0.3.js"></script>
-
+	<script>
+		$(function(){
+			var h = $(window).outerHeight();
+//			alert(h);
+			var h1 = h-114;
+			$('.conter>.tab-content>.tab-pane>div').css('height',h1);
+			
+		})
+	</script>
 	<!-- Include all compiled plugins (below), or include individual files as needed --> 
 	<script src="js/bootstrap.js"></script>
 </html>
