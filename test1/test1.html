@@ -186,46 +186,81 @@
 		    <div role="tabpanel" class="tab-pane active" id="home">
 		    	<div class="col-lg-6 col-md-6 col-ms-6 col-xs-6">
 		    		<div>
-		    			<div class="conter-title">认识JavaScript</div>
+		    			<div class="conter-title">在页面显示个人信息</div>
 		    			<div class="conter-video">
-		    				<video src="video/one1.mp4" controls="controls" autoplay="autoplay" height="100%"></video>
+		    				<video src="video/one2.mp4" controls="controls" autoplay="autoplay" height="100%"></video>
 		    			</div>
 		    		</div>
 		    		<div class="tab-leftbottom">
 		    			<h1>内容简介</h1>
-		    			<h3>1. JavaScript的发展</h3>
-		    			<p>JavaScript由布兰登·艾奇（Brendan Eich）发明，于1995年出现在Netscape。</p>
-							<p>Netscape与SUN合作，将LiveScript改为JavaScript，造就了这个强力的WEB页开发工具。</p>
-		    			<p>21世纪初，Google公司的网上产品使Ajax一时兴起，JavaScript重新找到自己的定位。</p>
-		    			<p>如今，web3.0时代，各种JavaScript的功能框架层出不穷，各种前端应用愈加丰富多彩。</p>
-		    			<h3>2. JavaScript的作用</h3>
-		    			<p>表单数据合法验证</p>
-		    			<p>页面特效</p>
-		    			<p>动态页面</p>
-		    			<p>数值计算</p>
-		    			<h3>3. JavaScript特点</h3>
+		    			<h3>1.JavaScript脚本执行原理</h3>
+                            <p>用户输入->发送请求->客户端请求含JS的页面->应用服务器->从服务器端下载含JavaScript的页面->返回响应->解析HTML标签和JavaScript脚本</p>
+                        <h3>2.JavaScript脚本基本结构</h3>
+                            <dl>
+                                <dt>JavaScript是一种基于对象和事件驱动的客户端脚本语言,并具有相对的安全性,主要用于创建交互性较强的动态页面.其主要特点是:</dt>
+                                <dd><img src="images/one21.png" /></dd>
+                            </dl>
+		    			<h4>2.1 JavaScript脚本编辑器</h4>
 		    			<dl>
-		    				<dt>JavaScript是一种基于对象和事件驱动的客户端脚本语言,并具有相对的安全性,主要用于创建交互性较强的动态页面。</dt>
-		    				<dd>基于对象的语言：它能运用自己创建的对象</dd>
-		    				<dd>事件驱动:采用事件驱动方式,并执行指定的操作</dd>
-		    				<dd>解释性语言:是一种解释性脚本语言,无须专门的编译器进行编译</dd>
-		    				<dd>简单性 ：它是一种基于java基本语句和控制流之上的简单而紧凑的设计；其次它的变量类型是采用弱类型，未使用严格数据的数据类型。</dd>
-		    				<dd>安全性 ：它不允许访问本地硬盘，不能将数据存入到服务器上，不允许对网络文档进行修改和删除，只能通过浏览器实现信息浏览或动态交互，对数据的操作是安全的。</dd>
-		    				<dd>动态性：可以直接对用户或客户的输入做出响应，无需经过web服务程序。</dd>
-		    				<dd>跨平台性 ：与操作环境无关，只依赖于浏览器本身，只要计算机支持实现了JavaScript的浏览器，它就可被正确执行。</dd>
+                            <p>编写JavaScript脚本代码可以选择普通的文本编辑器也可以选择专业网页开发工具，常用的工具有：</p>
+                            <dt>文本编辑器</dt>
+		    				<dd>记事本</dd>
+		    				<dd>EditPlus</dd>
+                            <dd>UltraEdit</dd>
+                            <dt>网页开发工具</dt>
+		    				<dd>Dreamweaver</dd>
+		    				<dd>SublimeText</dd>
+		    				<dd>Webstorm</dd>
+		    				<dd>HBuilder</dd>
 		    			</dl>
-		    			<h3>4. JavaScript的组成</h3>
-		    			<p style="text-align: center;"><img src="images/图片1.png"/></p>
+                        <h4>2.2.1通过&lt;script&gt;与&lt;/script&gt;标记引入</h4>
+                        <p><img src="images/one22.png" /></p>
 		    			<dl>
-		    				<dt>(1)ECMAScript主要描述了以下内容：</dt>
-		    				<dd>语法、变量和数据类型、关键字、保留字、运算符、逻辑控制语句、对象</dd>
-		    				<dd>ECMAScript定义了脚本语言的所有属性、方法和对象，因此在使用Web客户端脚本语言编码时一定要遵循ECMAScript标准。</dd>
-		    				<dt>(2)浏览器对象模型BOM</dt>
-		    				<dd>它可以对浏览器窗口进行访问和操作。利用BOM的相关技术，Web开发者可以移动窗口、改变状态栏以及执行一些与页面内容不相关的操作。</dd>
-		    				<dd style="text-align: center;"><img src="images/图片2.png"/></dd>
-		    				<dt>(3)文档对象模型DOM</dt>
-		    				<dd>DOM是Document Object Model（文档对象模型）的简称，是HTML文档对象模型（HTML DOM）定义的一套标准方法，用来访问和操纵HTML文档。</dd>
-		    				<dd>DOM由w3c定义，最新的浏览器都支持第一级和第二级DOM，通过JavaScript可以重构整个HTML文档。</dd>
+		    				<dd>Language属性:指定封装代码的脚本语言及版本</dd>
+		    				<dd>type属性:指定插入脚本代码类型</dd>
+		    				<dd>src属性:用于将外部的脚本文件内容嵌入到当前文档中</dd>
+                        </dl>
+
+                        <h4>2.2.2通过&lt;script&gt;标记的src引入</h4>
+		    			<dl>
+		    				<dd><img src="images/one23.png" /></dd>
+		    				<dd>(1)在文本编辑器中编辑代码并将其保存为02.js ，引入时注意目录。</dd>
+		    				<dd>(2)如果脚本程序较长或者同一段脚本可以在若干个Web页中使用，则可以将脚本放在单独的一个.js文件里，然后链接到需要它的HTML文件，这相当于将其中的脚本填入链接处。</dd>
+		    				<dd>(3)要引用外部脚本文件，使用&lt;SCRIPT&gt;标记的SRC属性来指定外部脚本文件的URL。</dd>
+                        </dl>
+                        <h4>2.2.3通过JavaScript伪URL引入</h4>
+		    			<dl>
+		    				<dt>伪URL地址的一般格式：</dt>
+		    				<dd>JavaScript:alert(“鼠标单击”)</dd>
+		    				<dd><img src="images/one24.png" /></dd>
+                        </dl>
+                        <h4>2.2.4通过HTML文档事件处理程序引入</h4>
+		    			<dl>
+		    				<dt>开发者可以给HTML文档中设定不同的事件处理器，通常是设置某HTML元素属性来引用一个脚本，属性一般以on开头。</dt>
+		    				<dd><img src="images/one25.png" /></dd>
+                        </dl>
+                        <h4>2.3 嵌入JavaScript脚本代码的位置</h4>
+		    			<dl>
+		    				<dd>JavaScript脚本代码可放在HTML文档中任何需要的位置。</dd>
+		    				<dd>在&lt;head&gt;&lt;/head&gt;标记对之间放置</dd>
+		    				<dd>在&lt;body&gt;&lt;/body&gt;标记对之间放置</dd>
+		    				<dd>在两个标记对之间混合放置</dd>
+                        </dl>
+                        <h3>3.常用的输入输出语句</h3>
+                        <h4>1. 警告对话框alert( )</h4>
+		    			<dl>
+		    				<dd>alert( )方法会创建一个警告框，用于将浏览器或文档的警告信息传递给客户。参数可以是变量、字符串或表达式，警告框无返回值。</dd>
+		    				<dd>alert( )方法的基本语法格式：alert( “提示信息”);</dd>
+                        </dl>
+                        <h4>2. 提示对话框prompt( )</h4>
+		    			<dl>
+		    				<dd>prompt( )方法会弹出一个提示对话框框，用于收集客户关于特定问题的反馈信息，提示框具有返回值。</dd>
+		    				<dd>prompt ( )方法的基本语法格式：prompt(“提示信息”,”输入框的默认信息”);</dd>
+                        </dl>
+                        <h4>3. 输出document.write( )</h4>
+		    			<dl>
+		    				<dd>document.write( )方法可以向文档写文本、HTML表达式或JavaScript代码。</dd>
+		    				<dd>document.write( )方法的基本语法格式：document.write(“输出内容” )；</dd>
 		    			</dl>
 		    		</div>
 		    	</div>
